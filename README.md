@@ -1,7 +1,6 @@
 Valentin Franco 4°1° Avionica
 Ayudante:Britez Luis
 
-
 #include <stdio.h>
 #include "pico/stdlib.h"
 
@@ -61,20 +60,18 @@ int main() {
   
 	/* Inicializo el LCD */
 	lcd_init(lcd);
-	char txt[]="hola como estas amigo franvi!";
-	;char aux[16];
-  ;while (true) {
-	for(int j=0; j< 16;j++){
-		lcd_clear(lcd);
-		for(int i=0;i<16;i++){
-		aux[i]=txt[i+j];
-		}
-		lcd_puts(lcd,aux);
-    /* Espero medio segundo */
-		sleep_ms(250);
-  	}			
-		}
-		
-
+	char txt[]="hola como estas amigo";
+	char aux[16];
+  while (true) {
 	
+		for(int j=0; j < 16;j++){
+			lcd_clear(lcd);
+			for(int i=0;i < 16;i++){
+				aux[i]=txt[i+j];
+			}
+			lcd_puts(lcd,aux);
+    	/* Espero medio segundo */
+			sleep_ms(250);
+  		}			
+		}	
 }
